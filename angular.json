@@ -23,7 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./src/assets/css/animate.css",
+              "./src/assets/css/bootstrap.min.css",
+              "./src/assets/css/font-awesome.min.css",
+              "./src/assets/css/pe-icons.css",
+              "./src/assets/css/prettyPhoto.css",
+              "./src/assets/css/style.css"
             ],
             "scripts": []
           },
@@ -72,9 +78,21 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "styles.css"
+              "styles.css",
+              "./src/assets/css/animate.css",
+              "./src/assets/css/bootstrap.min.css",
+              "./src/assets/css/font-awesome.min.css",
+              "./src/assets/css/pe-icons.css",
+              "./src/assets/css/prettyPhoto.css",
+              "./src/assets/css/style.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "./src/js/js/jquery.js",
+              "./src/js/js/plugins.js",
+              "./src/js/js/bootstrap.min.js",
+              "./src/js/js/jquery.prettyPhoto.js",
+              "./src/js/js/init.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
