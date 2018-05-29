@@ -3,6 +3,9 @@ import {Routes,RouterModule} from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PageAboutUsComponent } from './page-about-us/page-about-us.component';
+import { PageServicesComponent } from './page-services/page-services.component';
+import { PagePortfolioComponent } from './page-portfolio/page-portfolio.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 
@@ -18,11 +21,20 @@ const appRoutes: Routes = [
         path:'about-us',
         component:PageAboutUsComponent,
     },
-    /*
+    
     {
-        path:'login',
-        component: LoginComponent
+        path:'services',
+        component: PageServicesComponent
     },
+    {
+        path:'portfolio',
+        component: PagePortfolioComponent
+    },
+    {
+        path:'contact-us',
+        component: ContactUsComponent
+    },
+    /*
     {
         path:'admin',
         component:AdminComponent,

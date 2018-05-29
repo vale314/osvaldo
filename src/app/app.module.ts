@@ -21,6 +21,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { appRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PageAboutUsComponent } from './page-about-us/page-about-us.component';
+import { PageServicesComponent } from './page-services/page-services.component';
+import { PagePortfolioComponent } from './page-portfolio/page-portfolio.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import { PageAboutUsComponent } from './page-about-us/page-about-us.component';
     ContactComponent,
     FooterComponent,
     NotFoundComponent,
-    PageAboutUsComponent
+    PageAboutUsComponent,
+    PageServicesComponent,
+    PagePortfolioComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

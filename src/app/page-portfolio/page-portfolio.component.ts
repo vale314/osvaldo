@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { BackgroundService } from '../services/background.service';
 
 @Component({
-  selector: 'app-page-about-us',
-  templateUrl: './page-about-us.component.html',
-  styleUrls: ['./page-about-us.component.css']
+  selector: 'app-page-portfolio',
+  templateUrl: './page-portfolio.component.html',
+  styleUrls: ['./page-portfolio.component.css']
 })
-export class PageAboutUsComponent implements OnInit {
+export class PagePortfolioComponent implements OnInit {
 
   constructor(private background:BackgroundService) { }
 
