@@ -24,13 +24,46 @@
               <br>
               <br>
               <div id="message"></div>
-              <form method="post" action="sendemail.php" id="contactform">
-                  <input type="text" name="name" id="name" placeholder="Name" />
-                  <input type="text" name="email" id="email" placeholder="Email" />
-                  <input type="text" name="website" id="website" placeholder="Website" />
-                  <textarea name="comments" id="comments" placeholder="Comments"></textarea>
-                  <input class="btn btn-outlined btn-primary" type="submit" name="submit" value="Submit" />
+              <form  [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contactform">
+                  <div formGroupName="emailData">      
+                      <input type="text" name="name" id="name" placeholder="Name" formControlName="name" 
+                        [ngClass]="{
+                            'has-danger':contactForm.controls.emailData.controls.name.invalid && !contactForm.controls.emailData.controls.name.dirty, 
+                            'has-success':contactForm.controls.emailData.controls.name.valid && contactForm.controls.emailData.controls.name.dirty 
+                        }" 
+                      />
+                      <div>{{ contactForm.controls.emailData.controls.name.invalid && contactForm.controls.emailData.controls.name.dirty }}</div>
+                      <div>{{contactForm.controls.emailData.controls.name.valid && contactForm.controls.emailData.controls.name.dirty }}</div>
+
+                      <input type="text" name="email" id="email" placeholder="Email" formControlName="email" 
+                        [ngClass]="{
+                            'has-danger':contactForm.controls.emailData.controls.email.invalid && !contactForm.controls.emailData.controls.email.dirty, 
+                            'has-success':contactForm.controls.emailData.controls.email.valid && contactForm.controls.emailData.controls.email.dirty 
+                        }" 
+                      />
+                      <div>{{ contactForm.controls.emailData.controls.email.invalid && contactForm.controls.emailData.controls.email.dirty }}</div>
+                      <div>{{contactForm.controls.emailData.controls.email.valid && contactForm.controls.emailData.controls.email.dirty }}</div>
+                      <input type="number" name="phone" id="website" placeholder="Telefono" formControlName="phone" 
+                        [ngClass]="{
+                            'has-danger':contactForm.controls.emailData.controls.phone.invalid && !contactForm.controls.emailData.controls.phone.dirty, 
+                            'has-success':contactForm.controls.emailData.controls.phone.valid && contactForm.controls.emailData.controls.phone.dirty 
+                        }" 
+                      />
+                      <div>{{ contactForm.controls.emailData.controls.phone.invalid && contactForm.controls.emailData.controls.phone.dirty }}</div>
+                      <div>{{contactForm.controls.emailData.controls.phone.valid && contactForm.controls.emailData.controls.phone.dirty }}</div>
+                      <textarea name="text" id="comments" placeholder="Mensaje" formControlName="msj"
+                        [ngClass]="{
+                            'has-danger':contactForm.controls.emailData.controls.msj.invalid && !contactForm.controls.emailData.controls.msj.dirty, 
+                            'has-success':contactForm.controls.emailData.controls.msj.valid && contactForm.controls.emailData.controls.msj.dirty 
+                        }" 
+                      ></textarea>
+                      <div>{{ contactForm.controls.emailData.controls.msj.invalid && contactForm.controls.emailData.controls.msj.dirty }}</div>
+                      <div>{{contactForm.controls.emailData.controls.msj.valid && contactForm.controls.emailData.controls.msj.dirty }}</div>
+
+                      <input class="btn btn-outlined btn-primary" type="submit" name="submit" value="Submit" />
+                  </div>
               </form>
+
           </div><!-- col -->
       </div><!-- row -->  
       <div class="gap"></div>         

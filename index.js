@@ -35,6 +35,9 @@ app.get('/email',(req,res)=>{
             if(err){
                 console.log(err)
             }
+                html= String(html)
+
+                html = html.replace("{ name }", 'Valentin');
            
                 // setup email data with unicode symbols
 
@@ -43,7 +46,7 @@ app.get('/email',(req,res)=>{
                     to: 'electrovale314@hotmail.com',  // list of receivers
                     subject: 'Gracias Por Confiar En Nosotros', // Subject line
                     text: 'Hello world?', // plain text body
-                    html: `${html}` // html body
+                    html: html // html body
                 };
             
                 // send mail with defined transport object
