@@ -7,8 +7,10 @@ $(window).load(function(){
   if(portfolio_selectors!='undefined'){
     var portfolio = $('.portfolio-items');
     portfolio.isotope({
-      itemSelector : 'li',
-      layoutMode : 'fitRows'
+      itemSelector : '.col-md-4'
+ 
+      
+      
     });
     portfolio_selectors.on('click', function(){
       portfolio_selectors.removeClass('active');
