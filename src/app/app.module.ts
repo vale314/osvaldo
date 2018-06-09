@@ -14,7 +14,6 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { CommentsComponent } from './components/comments/comments.component';
-import { BlogComponent } from './components/blog/blog.component';
 import { PriceComponent } from './components/price/price.component';
 import { MapsAComponent } from './components/maps-a/maps-a.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -25,6 +24,8 @@ import { PageAboutUsComponent } from './page-about-us/page-about-us.component';
 import { PageServicesComponent } from './page-services/page-services.component';
 import { PagePortfolioComponent } from './page-portfolio/page-portfolio.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { PageBlogComponent } from './page-blog/page-blog.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 
 @NgModule({
@@ -40,16 +41,17 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     StatsComponent,
     PortfolioComponent,
     CommentsComponent,
-    BlogComponent,
     PriceComponent,
     MapsAComponent,
+    BlogComponent,
     ContactComponent,
     FooterComponent,
     NotFoundComponent,
     PageAboutUsComponent,
     PageServicesComponent,
     PagePortfolioComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    PageBlogComponent
   ],
   imports: [
     BrowserModule,
