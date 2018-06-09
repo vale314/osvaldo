@@ -24,8 +24,12 @@ import { PageAboutUsComponent } from './page-about-us/page-about-us.component';
 import { PageServicesComponent } from './page-services/page-services.component';
 import { PagePortfolioComponent } from './page-portfolio/page-portfolio.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { PageBlogComponent } from './page-blog/page-blog.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { PagePortafolioFullComponent } from './page-portafolio-full/page-portafolio-full.component';
+import { PortafolioFullComponent } from './components/portafolio-full/portafolio-full.component';
+import { PageItemComponent } from './page-item/page-item.component';
+import { ItemComponent } from './components/item/item.component';
+import { TagComponent } from './components/tag/tag.component';
 
 
 @NgModule({
@@ -51,7 +55,11 @@ import { BlogComponent } from './components/blog/blog.component';
     PageServicesComponent,
     PagePortfolioComponent,
     ContactUsComponent,
-    PageBlogComponent
+    PagePortafolioFullComponent,
+    PortafolioFullComponent,
+    PageItemComponent,
+    ItemComponent,
+    TagComponent
   ],
   imports: [
     BrowserModule,

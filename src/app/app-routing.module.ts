@@ -6,6 +6,8 @@ import { PageAboutUsComponent } from './page-about-us/page-about-us.component';
 import { PageServicesComponent } from './page-services/page-services.component';
 import { PagePortfolioComponent } from './page-portfolio/page-portfolio.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { PagePortafolioFullComponent } from './page-portafolio-full/page-portafolio-full.component';
+import { PageItemComponent } from './page-item/page-item.component';
 
 
 
@@ -27,12 +29,20 @@ const appRoutes: Routes = [
         component: PageServicesComponent
     },
     {
-        path:'portfolio',
+        path:'images',
         component: PagePortfolioComponent
     },
     {
         path:'contact-us',
         component: ContactUsComponent
+    },
+    {
+        path:'portfolio',
+        component: PagePortafolioFullComponent
+    },
+    {
+        path:'item',
+        component: PageItemComponent
     },
     /*
     {
