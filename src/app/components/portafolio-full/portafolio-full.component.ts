@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemsServices } from '../services/items/services.service';
+
 
 @Component({
   selector: 'app-portafolio-full',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortafolioFullComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ItemService:ItemsServices) { }
 
   ngOnInit() {
+    this.ItemService.get()
   }
 
 }

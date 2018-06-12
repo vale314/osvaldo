@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule  } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { IndexComponent } from './index/index.component';
 import { CaruselComponent } from './components/carusel/carusel.component';
-import { ServicesComponent } from './components/services/services.component';
+import { ServicesComponent } from './components/servicess/services.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { AboutUsTextComponent } from './components/about-us/about-us-text/about-us-text.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
@@ -64,7 +65,8 @@ import { TagComponent } from './components/tag/tag.component';
   imports: [
     BrowserModule,
     appRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

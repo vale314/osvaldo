@@ -41,8 +41,13 @@ const appRoutes: Routes = [
         component: PagePortafolioFullComponent
     },
     {
-        path:'item',
+        path:'item/:id',
         component: PageItemComponent
+    },
+    {
+        path:'item',
+        redirectTo:'portfolio',
+        pathMatch:'full'
     },
     /*
     {

@@ -19,7 +19,7 @@ export class BackgroundService {
             jQuery('body').backstretch([
               "../assets/images/bg/bg1.jpg",
               "../assets/images/bg/bg2.jpg",
-              "../assetsimages/bg/bg3.jpg"
+              "../assets/images/bg/bg3.jpg"
           ], {duration: 5000, fade: 500, centeredY: true });
 
         
