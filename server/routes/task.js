@@ -25,7 +25,7 @@ router.get('/email',(req,res)=>{
 
 
                 
-        fs.readFile(__dirname + '../email/index.html', function(err, html) {
+        fs.readFile(__dirname + '../services/email/index.html', function(err, html) {
             if(err){
                 console.log(err)
             }
