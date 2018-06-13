@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CaruselService } from '../services/carusel/carusel.service';
 
 @Component({
   selector: 'app-carusel',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaruselComponent implements OnInit {
 
-  constructor() { }
+  constructor(private CaruselService:CaruselService) { }
 
   ngOnInit() {
+    this.CaruselService.get()
   }
 
 }

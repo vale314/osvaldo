@@ -1,0 +1,14 @@
+<div class="login-page">
+  <div class="form">
+    <form class="login-form"  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div formGroupName="loginData"> 
+        <input type="text" placeholder="username" formControlName="username" />
+        <div class="error-message"  [ngClass]="{'error-message':!validEmail(), 'display':validEmail()}">Email not is valid.</div>
+        <input type="password" placeholder="password" formControlName="password" />
+        <div class="error-message" [ngClass]="{'error-message':!validPassword(), 'display':validPassword()}">Password not is valid.</div>
+      </div>
+      <button>login</button>
+      <p class="message">Not registered? <a href="#">Home</a></p>
+    </form>
+  </div>
+</div>

@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { IndexComponent } from './index/index.component';
 import { CaruselComponent } from './components/carusel/carusel.component';
-import { ServicesComponent } from './components/servicess/services.component';
+import { ServicesComponent } from './components/services-main/services.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { AboutUsTextComponent } from './components/about-us/about-us-text/about-us-text.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
@@ -31,6 +31,9 @@ import { PortafolioFullComponent } from './components/portafolio-full/portafolio
 import { PageItemComponent } from './page-item/page-item.component';
 import { ItemComponent } from './components/item/item.component';
 import { TagComponent } from './components/tag/tag.component';
+import { ServicesSecondaryComponent } from './components/services-secondary/services-secondary.component';
+import { ServicesSecondaryTagComponent } from './components/services-secondary/services-secondary-tag/services-secondary-tag.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -60,8 +63,11 @@ import { TagComponent } from './components/tag/tag.component';
     PortafolioFullComponent,
     PageItemComponent,
     ItemComponent,
-    TagComponent
-  ],
+    TagComponent,
+    ServicesSecondaryComponent,
+    ServicesSecondaryTagComponent,
+    LoginComponent
+],
   imports: [
     BrowserModule,
     appRoutingModule,

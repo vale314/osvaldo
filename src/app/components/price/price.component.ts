@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PriceService } from '../services/price/price.service';
 
 @Component({
   selector: 'app-price',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PriceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private PriceService:PriceService) { }
 
   ngOnInit() {
+    this.PriceService.get()
   }
 
 }

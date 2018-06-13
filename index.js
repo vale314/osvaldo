@@ -11,9 +11,11 @@ app.use(express.static('./dist/Proyect/js'));
 
 const indexRoutes = require('./server/routes/index');
 const tasksRoutes = require('./server/routes/task');
-
+const adminRoutes = require('./server/routes/admin')
 
 app.use('/api', tasksRoutes);
+app.use('/admin',adminRoutes)
+
 
 app.get('*',(req,res)=>{
     res.sendFile(path.join(__dirname,'./dist/Proyect/index.html'));
@@ -21,6 +23,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(5000,'192.168.1.76' ,()=>{
+app.listen(3200,'192.168.1.76' ,()=>{
     console.log("Server Is Running");
 })

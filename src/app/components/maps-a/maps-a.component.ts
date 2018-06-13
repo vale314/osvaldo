@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild ,AfterViewInit } from '@angular/core';
+import { MapsIconServices } from '../services/maps/maps-icon.service';
 
 
 
@@ -11,9 +12,12 @@ export class MapsAComponent implements OnInit {
   @ViewChild('mapwrapper') gmapElement: any;
   map: google.maps.Map;
 
+  constructor(private MapsIconService:MapsIconServices){
+  }
+
   ngOnInit(){   
-      
-    }
+    this.MapsIconService.get()    
+  }
     
     
     ngAfterViewInit(){

@@ -8,6 +8,7 @@ import { PagePortfolioComponent } from './page-portfolio/page-portfolio.componen
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PagePortafolioFullComponent } from './page-portafolio-full/page-portafolio-full.component';
 import { PageItemComponent } from './page-item/page-item.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -48,6 +49,10 @@ const appRoutes: Routes = [
         path:'item',
         redirectTo:'portfolio',
         pathMatch:'full'
+    },
+    {
+        path:'login',
+        component:LoginComponent
     },
     /*
     {

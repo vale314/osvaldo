@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AboutUsTextService } from '../../services/about-us/about-us-text.service';
 
 @Component({
   selector: 'app-about-us-text',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsTextComponent implements OnInit {
 
-  constructor() { }
+  constructor(private AboutUsTextServices:AboutUsTextService) { }
 
   ngOnInit() {
+    this.AboutUsTextServices.get()
   }
 
 }
