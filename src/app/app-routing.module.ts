@@ -9,7 +9,11 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PagePortafolioFullComponent } from './page-portafolio-full/page-portafolio-full.component';
 import { PageItemComponent } from './page-item/page-item.component';
 import { LoginComponent } from './login/login.component';
-
+import { IndexAdminComponent } from './admin/index/index.component';
+import { 
+    AuthGuardService as AuthGuard 
+  } from './services/guard/auth-guard.service';
+import { RoleGuardService } from './services/roles/role-guard.service';
 
 
 const appRoutes: Routes = [
@@ -53,6 +57,17 @@ const appRoutes: Routes = [
     {
         path:'login',
         component:LoginComponent
+    },
+    {
+        path:'admin',
+        component:IndexAdminComponent,
+        canActivate: [AuthGuard,RoleGuardService],
+        data:{
+            expectedRole: 'admin'
+        },
+        children:[
+            
+        ]
     },
     /*
     {

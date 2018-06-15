@@ -19,7 +19,6 @@ module.exports = new LocalStrategy({
     email: email.trim(),
     password: password.trim()
   };  
-    console.log(email)
                        //si user no tiene nada una constante es igual a un nuevo valor que es igual  a un error que nos manada un mensaje
                        return Admin.findOne({ email: userData.email }, (err, admin) => {
                         
@@ -61,7 +60,8 @@ module.exports = new LocalStrategy({
                             }
                             //tenemos una constante llamada payload que es igual a el user manadado en el findOne y el sub ees igual a la id
                           const payload = {
-                            sub: admin._id
+                            sub: admin._id,
+                            roles: 'admin'
                           };
 
                           //tenemos una constante lalmada token que es igual  a iniciar de jwt le pasamos el payload y de config le mandamos la pal.
@@ -69,7 +69,7 @@ module.exports = new LocalStrategy({
                           //tenemos una constante data que tiene a nombre del usuario que se encontro por la funcion
                           const data = {
                           name: admin.name,
-                          types: 'use',
+                          types: 'admin',
                         };
                         //retornamos con el done le decimos que fianlizamos en local-login mandamos el token getInternalInstanceReadyForUpdate
                         //y el dato que es el nombre del usuario encontrado

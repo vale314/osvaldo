@@ -34,6 +34,8 @@ import { TagComponent } from './components/tag/tag.component';
 import { ServicesSecondaryComponent } from './components/services-secondary/services-secondary.component';
 import { ServicesSecondaryTagComponent } from './components/services-secondary/services-secondary-tag/services-secondary-tag.component';
 import { LoginComponent } from './login/login.component';
+import { IndexAdminComponent } from './admin/index/index.component';
+
 
 
 @NgModule({
@@ -41,6 +43,7 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     HeaderComponent,
     IndexComponent,
+    IndexAdminComponent,
     CaruselComponent,
     ServicesComponent,
     CommentComponent,
